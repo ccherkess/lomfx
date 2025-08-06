@@ -4,17 +4,17 @@
 
 ```
 <dependencies>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-base</artifactId>
-            <version>${openfx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.project</groupId>
-            <artifactId>lomfx</artifactId>
-            <version>${lomfx.version}</version>
-        </dependency>
-    </dependencies>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-base</artifactId>
+        <version>${openfx.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.project</groupId>
+        <artifactId>lomfx</artifactId>
+        <version>${lomfx.version}</version>
+    </dependency>
+</dependencies>
 ```
 
 1. In maven-compiler-plugin add the following configuration.
@@ -72,5 +72,24 @@ public class Example {
 After compile
 
 ```
+import javafx.beans.property.ObjectProperty;
 
+public class Example {
+    ObjectProperty<String> data;
+
+    public Example() {
+    }
+
+    public ObjectProperty<String> dataProperty() {
+        return this.data;
+    }
+
+    public String getData() {
+        return (String)this.data.getValue();
+    }
+
+    public void setData(String value) {
+        this.data.setValue(value);
+    }
+}
 ```
