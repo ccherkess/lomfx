@@ -59,12 +59,7 @@ import org.project.lomfx.annotations.FxValue;
 @FxValue
 public class Example {
 
-    BooleanProperty booleanProperty;
-    DoubleProperty doubleProperty;
-    FloatProperty floatProperty;
-    IntegerProperty integerProperty;
-    LongProperty longProperty;
-    ObjectProperty<String> objectProperty;
+    ObjectProperty<String> data;
 
 }
 ```
